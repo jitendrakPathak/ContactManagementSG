@@ -1,0 +1,41 @@
+﻿@model ContactManagement.Models.ContactModel
+@using ContactManagement.Models
+
+<div aria-hidden="true" aria-labelledby="modal-action-contact-label" role="dialog" tabindex="-1" id="model-contact" class="modal fade">
+    <div class="modal-dialog model-lg">
+        <div class="modal-content">
+            <form asp-action="AddEditCustomer" role="form">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title">Add/Edit</h4>
+                </div>
+                <div class="modal-body form-horizontal">
+                    <div class="form-group">
+                        <label asp-for="FirstName" class="col-lg-3 col-sm-3 control-label"></label>
+                        <div class="col-lg-6">
+                            <input asp-for="FirstName" class="form-control" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="LastName" class="col-lg-3 col-sm-3 control-label"></label>
+                        <div class="col-lg-6">
+                            <input asp-for="LastName" class="form-control" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="PhoneNumbers" class="col-lg-3 col-sm-3 control-label"></label>
+                        <div class="col-lg-6">
+                            <input asp-for="PhoneNumbers" class="form-control" />
+                        </div>
+                    </div>
+                </div>
+                <button data-dismiss="modal" id="cancelBtn" class="btn btn-default" type="button">
+                    Cancel
+                </button>
+                <button class="btn btn-success" id="SubmitBtn" type="submit">
+                    Save
+                </button>
+            </form>
+        </div>
+    </div>
+</div>
